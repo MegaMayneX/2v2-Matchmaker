@@ -14,8 +14,8 @@ const io = new Server(server, {
     },
 });
 
-app.use(cors()); // Enable CORS for Express
-app.use(express.static(__dirname)); // Serve static files from the current directory
+// Serve static files from the "public" folder
+app.use(express.static('public'));
 
 let players = [];
 
@@ -37,9 +37,7 @@ io.on('connection', (socket) => {
 
     // Handle chat messages
     socket.on('sendMessage', (data) => {
-        console.log("Message received:", data); // Log the received message
         const { displayName, message } = data;
-
         const timestamp = new Date().toLocaleTimeString();
 
         io.emit('receiveMessage', { displayName, message, timestamp }); // Broadcast the message to all clients
@@ -53,7 +51,7 @@ io.on('connection', (socket) => {
     });
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
