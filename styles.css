@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Player Setup Section */
+#player-setup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#display-name {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#toggle-availability {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#toggle-availability:hover {
+    background-color: #45a049;
+}
+
+/* Available Players Section */
+#available-players {
+    text-align: center;
+}
+
+#available-players ul {
+    list-style: none;
+    padding: 0;
+}
+
+#available-players li {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    background-color: #f9f9f9;
+}
