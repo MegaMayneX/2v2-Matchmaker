@@ -1,5 +1,4 @@
-const socket = io("const socket = io("https://2v2-matchmaker-backend.onrender.com");
-");
+const socket = io("https://twov2-matchmaker-backend.onrender.com");
 
 // Get references to DOM elements
 const displayNameInput = document.getElementById("display-name");
